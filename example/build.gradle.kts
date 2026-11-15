@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.iwdael.permissionsdispatcher.example"
-    compileSdk = 34
+    namespace = "com.ansolm.permissionsdispatcher.example"
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.iwdael.permissionsdispatcher.example"
+        applicationId = "com.ansolm.permissionsdispatcher.example"
         minSdk = 21
-        targetSdk = 35
+        targetSdk = 37
         versionCode = 1
         versionName = "0.0.1"
 
@@ -26,13 +26,20 @@ android {
             )
         }
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 

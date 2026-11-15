@@ -1,7 +1,7 @@
 # PermissionsDispatcher
 ![](https://img.shields.io/badge/platform-android-orange.svg)
 ![](https://img.shields.io/badge/language-java-yellow.svg)
-![](https://jitpack.io/v/com.iwdael/permissionsdispatcher.svg)
+![](https://jitpack.io/v/com.ansolm/permissionsdispatcher.svg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![](https://img.shields.io/badge/license-apache--2.0-green.svg)
 ![](https://img.shields.io/badge/api-19+-green.svg)
@@ -61,8 +61,8 @@ public class MasterActivity extends AppCompatActivity {
 ```Java
 	dependencies {
                 ...
-	        compile 'com.iwdael.permissionsdispatcher:dispatcher:$version'
-	        kapt 'com.iwdael.permissionsdispatcher:compiler:$version'
+	        compile 'com.ansolm.permissionsdispatcher:dispatcher:$version'
+	        kapt 'com.ansolm.permissionsdispatcher:compiler:$version'
 	}
 ```
 <br><br>

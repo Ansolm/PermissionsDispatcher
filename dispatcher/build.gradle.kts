@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.iwdael.permissionsdispatcher"
-    compileSdk = 34
+    namespace = "com.ansolm.permissionsdispatcher"
+    compileSdk = 37
 
     defaultConfig {
-        minSdk = 19
+        minSdk = 21
     }
 
     buildTypes {
@@ -22,10 +22,21 @@ android {
         }
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
+    publishing {
+        singleVariant("release")
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
 }
 
 dependencies {
@@ -37,7 +48,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.iwdael.permissionsdispatcher"
+            groupId = "com.ansolm.permissionsdispatcher"
             artifactId = "dispatcher"
             afterEvaluate {
                 from(components["release"])

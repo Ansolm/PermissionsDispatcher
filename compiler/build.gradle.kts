@@ -4,6 +4,17 @@ plugins {
     id("maven-publish")
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
 
 
 dependencies {
@@ -24,7 +35,7 @@ val sourcesJar by tasks.creating(Jar::class) {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.iwdael.permissionsdispatcher"
+            groupId = "com.ansolm.permissionsdispatcher"
             artifactId = "compiler"
             from(components["java"])
             artifact(sourcesJar)
