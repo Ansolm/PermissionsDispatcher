@@ -3,7 +3,7 @@ agp = "9.5.1"
 kotlin = "2.3.21"
 jetbrainsKotlinJvm = "2.3.21"
 kotlinpoetKsp = "1.18.1"
-kotlinsymbolprocessor = "0.0.4"
+kotlinsymbolprocessor = "0.0.6"
 ksp = "2.3.14"
 coreKtx = "1.13.0"
 lifecycleRuntimeKtx = "2.6.2"
@@ -14,7 +14,7 @@ symbolProcessingApi = "2.3.14"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-kotlinsymbolprocessor = { module = "com.ansolm:kotlinsymbolprocessor", version.ref = "kotlinsymbolprocessor" }
+kotlinsymbolprocessor = { module = "com.github.ansolm:KotlinSymbolProcessor", version.ref = "kotlinsymbolprocessor" }
 symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "symbolProcessingApi" }
 
 [plugins]

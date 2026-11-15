@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.ansolm.permissionsdispatcher"
+    namespace = "com.github.ansolm"
     compileSdk = 37
 
     defaultConfig {
@@ -48,7 +48,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.ansolm.permissionsdispatcher"
+            groupId = "com.github.ansolm"
             artifactId = "dispatcher"
             afterEvaluate {
                 from(components["release"])

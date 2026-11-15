@@ -35,7 +35,7 @@ val sourcesJar by tasks.creating(Jar::class) {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.ansolm.permissionsdispatcher"
+            groupId = "com.github.ansolm"
             artifactId = "compiler"
             from(components["java"])
             artifact(sourcesJar)
